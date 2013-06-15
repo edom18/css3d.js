@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>mocha sample</title>
+<link rel="stylesheet" href="mocha.css">
+<script src="mocha.js"></script>
+<script src="assert.js"></script>
+<script src="../js/Class.js"></script>
+<script src="../js/EventDispatcher.js"></script>
+<script src="../js/math/Vector3.js"></script>
+<script src="../js/math/Matrix2.js"></script>
+<script src="../js/math/Matrix4.js"></script>
+<script src="../js/css3d.js"></script>
+<script>
+    mocha.setup('bdd');
+    window.onload = function () {mocha.run()};
+</script>
+<script src="test.js"></script>
+</head>
+<body>
+<div id="mocha"></div>
+</body>
+</html>
