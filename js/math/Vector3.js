@@ -10,6 +10,13 @@
       */
     var Vector3 = Class.extend({
         init: function (x, y, z) {
+            if (Array.isArray(x)) {
+                var tmp = x;
+                x = tmp[0];
+                y = tmp[1];
+                z = tmp[2];
+            }
+
             this.x = x || 0;
             this.y = y || 0;
             this.z = z || 0;
@@ -25,6 +32,13 @@
         },
 
         set: function (x, y, z) {
+            if (Array.isArray(x)) {
+                var tmp = x;
+                x = tmp[0];
+                y = tmp[1];
+                z = tmp[2];
+            }
+
             this.x = x || 0;
             this.y = y || 0;
             this.z = z || 0;

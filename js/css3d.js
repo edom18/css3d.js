@@ -3,19 +3,8 @@
     'use strict';
 
     var Camera;
-    
-    var max  = Math.max,
-        min  = Math.min,
-        sqrt = Math.sqrt,
-        tan  = Math.tan,
-        cos  = Math.cos,
-        sin  = Math.sin,
-        PI   = Math.PI,
-
-        DEG_TO_RAD = PI / 180;
 
     win.Float32Array = win.Float32Array || win.Array;
-
 
     /**
       Camera class
@@ -33,7 +22,9 @@
             this.near = near;
             this.far = far;
             this.position = position != null ? position : new Vector3(0, 0, 20);
-            Camera.__super__.constructor.apply(this, arguments);
+
+            this._super.apply(this, arguments);
+
             this.lookAtMatrix = new Matrix4;
             this.viewMatrix = new Matrix4;
             this.projectionMatrix = new Matrix4;
